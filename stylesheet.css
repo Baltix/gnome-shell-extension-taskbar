@@ -1,6 +1,8 @@
 /*
   GNOME Shell Extension TaskBar
-  Copyright (C) 2013 zpydr
+  Copyright (C) 2014 zpydr
+
+  Version 39
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,24 +17,11 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   
-  zpydr@linuxwaves.com
+  zpydr@openmailbox.org
 */
 
 #bottomPanel {
-    color: #ffffff;
-    background-color: black;
-}
 
-.message-button {
-    min-width: 2.5em;
-    font-weight: bold;
-    color: #ccc;
-    transition-duration: 100;
-}
-
-.message-button:hover {
-    color: white;
-    text-shadow: black 0px 2px 2px;
 }
 
 .tkb-box
@@ -52,16 +41,51 @@
     border: 1px;
 }
 
-.tkb-task-button:active-task-frame
+.tkb-task-button-label
+{
+    padding-left: 4px;
+    font-size:1em;
+}
+ 
+.tkb-task-button-top.text-button,
+.tkb-task-button-bottom.text-button
+{
+    padding: 1px 5px;
+    margin: 0 1px;
+    border: 1px solid rgba(255,255,255,0);
+}
+
+.tkb-task-button-top.text-button:hover,
+.tkb-task-button-bottom.text-button:hover
+{
+    
+    border: 1px solid rgba(255,255,255,.75);
+    background-image: url("images/active-task-background.svg");
+}
+
+.tkb-task-button:active-task-frame,
+.tkb-task-button-top:active-task-frame,
+.tkb-task-button-bottom:active-task-frame,
+.tkb-task-button-top.text-button:active-task-frame,
+.tkb-task-button-bottom.text-button:active-task-frame,
+
 {
     border: 1px solid gray;
     border-radius: 5px;
     background-image: url("images/active-task-background.svg");
 }
 
+.tkb-task-button-top.text-button:active-task-frame,
+.tkb-task-button-bottom.text-button:active-task-frame
+{
+    border-radius: 0px;
+    border: 1px solid rgb(255,255,255);
+    background-image: url("images/active-task-background.svg");
+}
+
 .tkb-task-button:active-task-no-frame
 {
-
+    border-radius: 5px;
 }
 
 .tkb-preview
